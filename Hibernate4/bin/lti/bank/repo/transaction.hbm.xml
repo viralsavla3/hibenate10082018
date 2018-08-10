@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+          
+          <hibernate-mapping package="lti.bank.bean">
+          <class name="Account" table="account">
+          <id name="id">
+          
+          <generator class="assigned"></generator>
+          
+          </id>
+          <set name="account" cascade="save-update,delete" inverse="true">
+          <key column="id" on-delete="cascade"></key>
+          <one-to-many class="Transaction"/>
+          </set>
+          <property name="holder" type="string"></property>
+          <property name="balance" ></property>
+          
+          </class>
+          
+          
+          <class name="Transaction" table="transaction">
+          <id name="actno">
+          <generator class="assigned"></generator>
+          </id>
+          <many-to-one name="actno" column="account_no" not-null="true"></many-to-one>
+          <property name="type"></property>
+          <property name="amount"></property>
+          </class>
+          </hibernate-mapping>
