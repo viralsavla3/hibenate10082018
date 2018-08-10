@@ -33,11 +33,23 @@
 		<!-- Drop and re-create the database schema on startup -->
 		<property name="hbm2ddl.auto">update</property>
 
-		<!-- We have to add mapping files in cfg -->
-		<mapping resource="mappings/customer.hbm.xml" />
-		<mapping resource="mappings/book.hbm.xml" />
-		<mapping resource="mappings/person.hbm.xml" />
-		
+		<!-- We have to add mapping files in cfg <mapping resource="mappings/customer.hbm.xml" 
+			/> <mapping resource="mappings/book.hbm.xml" /> <mapping resource="mappings/person.hbm.xml" 
+			/> -->
+		<!-- <mapping resource="lti/pojo/tableperhierarchy/BillingDetails.hbm.xml" 
+			/> <mapping resource="lti/pojo/tableperconcreteclass/BillingDetails.hbm.xml" 
+			/> -->
+
+		<!-- <mapping resource="lti/pojo/tablepersubclass/discriminator/BillingDetails.hbm.xml" 
+			/> -->
+
+		<!-- <mapping resource="lti/pojo/tablepersubclass/BillingDetails.hbm.xml" 
+			/> -->
+<!-- 		<mapping resource="lti/pojo/one2one/user.hbm.xml" /> -->
+		<mapping resource="lti/pojo/one2many/employee.hbm.xml" />
+
+
+
 	</session-factory>
 
 </hibernate-configuration>
