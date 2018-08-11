@@ -30,6 +30,8 @@ public class Comment {
 	@JoinColumn(name = "userId")
 	private User user; // OnetoMany Unidirectional
 
+	
+
 	public String getCommentId() {
 		return commentId;
 	}

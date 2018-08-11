@@ -23,7 +23,24 @@ public class User {
 	private String email;
 	@OneToMany(mappedBy = "user", cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
 	@OnDelete(action = OnDeleteAction.CASCADE)
-	private Set<Feed> feed = new HashSet<Feed>(); // OneToMany
+	private Set<Feed> feed = new HashSet<Feed>();// OneToMany
+	
+//	private Set<Comment> comment = new HashSet<Comment>();
+//
+//	
+//	public Set<Comment> getComment() {
+//		return comment;
+//	}
+//
+//	public void setComment(Set<Comment> comment) {
+//		this.comment = comment;
+//	}
+
+	
+
+	public String getPassword() {
+		return password;
+	}
 
 	public String getUserId() {
 		return userId;
@@ -31,10 +48,6 @@ public class User {
 
 	public void setUserId(String userId) {
 		this.userId = userId;
-	}
-
-	public String getPassword() {
-		return password;
 	}
 
 	public void setPassword(String password) {

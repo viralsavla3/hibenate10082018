@@ -33,6 +33,8 @@ public class Feed {
 	@JoinColumn(name = "userId")
 	private User user; // ManytoOne
 
+	
+
 	public String getFeedId() {
 		return feedId;
 	}
