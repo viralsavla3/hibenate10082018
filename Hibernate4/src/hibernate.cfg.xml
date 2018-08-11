@@ -46,7 +46,8 @@
 		<!-- <mapping resource="lti/pojo/tablepersubclass/BillingDetails.hbm.xml" 
 			/> -->
 <!-- 		<mapping resource="lti/pojo/one2one/user.hbm.xml" /> -->
-		<mapping resource="lti/pojo/one2many/employee.hbm.xml" />
+		<!-- <mapping resource="lti/pojo/one2many/employee.hbm.xml" /> -->
+		<mapping resource="lti/bank/repo/transaction.hbm.xml" />
 
 
 

@@ -2,6 +2,9 @@ package lti.bank.bean;
 
 public class Transaction {
 	private int id;
+	private String type;
+	private int amount;
+	private Account acc;
 
 	public int getId() {
 		return id;
@@ -11,10 +14,6 @@ public class Transaction {
 		this.id = id;
 	}
 
-	private String type;
-	private double amount;
-	private Account account;
-
 	public String getType() {
 		return type;
 	}
@@ -23,19 +22,20 @@ public class Transaction {
 		this.type = type;
 	}
 
-	public double getAmount() {
+	public int getAmount() {
 		return amount;
 	}
 
-	public void setAmount(double amount) {
+	public void setAmount(int amount) {
 		this.amount = amount;
 	}
 
-	public Account getAccount() {
-		return account;
+	public Account getAcc() {
+		return acc;
 	}
 
-	public void setAccount(Account account) {
-		this.account = account;
+	public void setAcc(Account acc) {
+		this.acc = acc;
 	}
+
 }

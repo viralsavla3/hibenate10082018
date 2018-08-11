@@ -13,8 +13,8 @@ public class TestCustomer {
 		try {
 			txns.begin(); // starting db transaction
 			Customer c = new Customer();
-			c.setCustName("Polo Shah");
-			c.setCreditLimit(9000);
+			c.setCustName("Shah");
+			c.setCreditLimit(90000);
 			session.save(c); // saving customer object
 			txns.commit(); // ending transaction with commit
 		} catch (Exception e) {
