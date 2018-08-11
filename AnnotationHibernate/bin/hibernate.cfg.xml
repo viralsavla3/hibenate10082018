@@ -55,7 +55,10 @@
 <!-- 		<mapping class="lti.pojo.one2many.Employee"/> 
  -->
  
-	<mapping class="lti.pojo.Order"/> 
+	<mapping class="FeedForum.pojos.Comment"/>
+	<mapping class="FeedForum.pojos.Feed"/>
+	<mapping class="FeedForum.pojos.User"/>
+	 
 
 
 	</session-factory>
